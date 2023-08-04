@@ -7,9 +7,9 @@ export const info = {
 export const links = {
   email: 'faysal515.ae@gmail.com',
   whatsapp: '+971505352169',
-  stackoverlow: 'https://www.linkedin.com/in/abhishek-kumar-4a1b0b1a4/',
-  github: 'https://www.linkedin.com/in/abhishek-kumar-4a1b0b1a4/',
-  linkedin: 'https://www.linkedin.com/in/abhishek-kumar-4a1b0b1a4/'
+  stackoverlow: 'https://stackoverflow.com/users/1652667/faysal-ahmed',
+  github: 'https://github.com/faysal515',
+  linkedin: 'https://www.linkedin.com/in/faysal515/'
 };
 
 export const experiences = [
@@ -27,7 +27,15 @@ export const experiences = [
       'Interviewed candidates for full stack developer position and did primary resume screening'
     ],
     active: true,
-    skills: ['Node.js', 'React', 'Websocket', 'Redis']
+    skills: [
+      'Node.js',
+      'React',
+      'PostgreSQL',
+      'Typescript',
+      'Websocket',
+      'Redis',
+      'Serverless'
+    ]
   },
   {
     id: 2,
@@ -43,7 +51,14 @@ export const experiences = [
       'Built the Rider delivery app using React Native which increased delivery efficiancy by 20%'
     ],
     active: false,
-    skills: ['React Native', 'mobile banking integration']
+    skills: [
+      'Node.js',
+      'React',
+      'GraphQL',
+      'React Native',
+      'Mobile Payment',
+      'MongoDB'
+    ]
   },
   {
     id: 3,
@@ -59,7 +74,15 @@ export const experiences = [
       'Migrated to Typescript from legacy codebase which improved the code quality'
     ],
     active: false,
-    skills: ['XMPP', 'Ejabberd', 'React Native', 'Typescript']
+    skills: [
+      'Node.js',
+      'MongoDB',
+      'XMPP',
+      'Ejabberd',
+      'React Native',
+      'Typescript',
+      'MySQL'
+    ]
   },
   {
     id: 4,
@@ -73,7 +96,7 @@ export const experiences = [
       'Built software to take inputs of health metrics for a campaign in Africa Region'
     ],
     active: false,
-    skills: ['Slackbot', 'Software Development']
+    skills: ['Slackbot', 'Software Development', 'Node.js', 'Meteor']
   }
 ];
 
