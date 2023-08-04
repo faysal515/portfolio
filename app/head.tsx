@@ -10,8 +10,8 @@ const Head = () => {
     pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2);
 
   const meta = {
-    title: `Faysal Ahmed ${pathname === '/' ? '' : '· ' + titleFixedToShow}`,
-    description: `Hi! My name is Faysal Ahmed, a seasoned software developer having a decade of experince delivery software for startups`,
+    title: `Faysal Ahmed - Lead Software Engineer`,
+    description: `Seasoned Software developer having a decade of experince delivery software for startups`,
     keywords: 'full stack developer, software consultant, solutions architect',
     type: 'website'
   };
@@ -23,7 +23,7 @@ const Head = () => {
       <meta name="robots" content="follow, index" />
       <meta content={meta.description} name="description" />
       <meta name="keywords" content={meta.keywords} />
-      <link rel="canonical" href={`https://jeandv.vercel.app${pathname}`} />
+      <link rel="canonical" href={`https://faysal515.dev${pathname}`} />
       <link rel="me" href="mailto:faysal515.ae@gmail.com" />
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content="Faysal Ahmed" />
