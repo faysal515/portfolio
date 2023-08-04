@@ -1,38 +1,46 @@
-import AboutMe from '../content/AboutMe';
 import ContactMe from '../content/ContactMe';
-import CurrentFavTech from '../content/CurrentFavTech';
-import CurrentLearning from '../content/CurrentLearning';
 import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
-import FavProjects from '../content/FavProjects';
 import Hero from '../content/Hero';
-import ProcessWork from '../content/ProcessWork';
 import SectionContainer from '../utils/SectionContainer';
+import OpenSourceProject from './OpenSourceProject';
+import {
+  FaStackOverflow,
+  FaLinkedin,
+  FaGithub,
+  FaWhatsapp
+} from 'react-icons/fa6';
+
+import { links } from '../data';
+
+const SocialLinks = ({ links }) => {
+  return (
+    <div className="flex flex-row w-full text-white space-x-4 sm:justify-start justify-center">
+      <a href={links.stackoverlow} target="_blank" rel="noreferrer">
+        <FaWhatsapp size={32} title="whatsapp" />
+      </a>
+      <a href={links.stackoverlow} target="_blank" rel="noreferrer">
+        <FaStackOverflow size={32} />
+      </a>
+      <a href={links.linkedin} target="_blank" rel="noreferrer">
+        <FaLinkedin size={32} />
+      </a>
+      <a href={links.github} target="_blank" rel="noreferrer">
+        <FaGithub size={32} />
+      </a>
+    </div>
+  );
+};
 
 const HomeSection = () => {
   return (
     <SectionContainer>
-
       <Hero />
-
-      <CurrentFavTech />
-      <CurrentLearning />
-
-      <div className='w-full flex flex-col items-start'>
-
-        <AboutMe />
-
-        <CurrentTimeLineExp />
-
-        <FavProjects />
-
-        <ProcessWork />
-
-        <ContactMe />
-
-      </div>
-
+      <SocialLinks links={links} />
+      <CurrentTimeLineExp />
+      <OpenSourceProject />
+      <ContactMe />
     </SectionContainer>
-  )
-}
+  );
+};
 
 export default HomeSection;

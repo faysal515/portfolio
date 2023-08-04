@@ -1,42 +1,40 @@
 import Image from 'next/image';
 import AnimationContainer from '../utils/AnimationContainer';
 
+const info = {
+  name: 'Faysal Ahmed',
+  subtext: 'Elevating Businesses with All-Round Tech Expertise',
+  description: `With a decade of hands-on experience and a strategic mindset, I offer premium consultancy services to help you navigate your software development journey. Whether you need guidance in setting up a robust backend, integrating an intuitive frontend, or building an efficient infrastructure, I bring my expertise to ensure your project's success. My high-end services are a strategic investment in your project's longevity and effectiveness`
+};
+
 const Hero = () => {
   return (
-    <div className='w-full flex justify-between flex-col-reverse lg:flex-row items-center'>
-
-      <AnimationContainer customClassName='flex flex-col items-center justify-between lg:items-start p-0 lg:pr-8'>
-
-        <h1 className='font-bold text-3xl lg:text-5xl text-center lg:text-start tracking-tight mb-3 text-white mx-auto lg:mx-0'>
-          Jean Rondón
+    <div className="flex flex-wrap-reverse justify-center w-full md:justify-auto md:grid md:grid-cols-3 text-white">
+      <AnimationContainer customClassName="flex md:col-span-2 w-full flex-col items-center justify-between lg:items-start p-0 lg:pr-8">
+        <h1 className="mx-auto mb-3 text-3xl font-bold tracking-tight text-center  lg:text-5xl lg:text-start lg:mx-0">
+          {info.name}
         </h1>
-
-        <h2 className='flex items-center gap-2 text-1xl lg:text-1xl text-gray-200 mb-8 mx-auto lg:mx-0'>
-
-          <span className='font-semibold'>JavaScript</span>Developer
-
+        <h2 className="flex items-center gap-2 mx-auto mb-8  text-1xl lg:text-1xl lg:mx-0">
+          <span className="font-bold text-amber-300">{info.subtext}</span>
         </h2>
-
-        <p className='w-full text-base text-center lg:text-start mb-5 lg:mb-0 text-gray-400 mx-auto lg:mx-0'>
-          I enjoy programming and whenever I can I try to learn new things.
+        <p className="w-full mx-auto mb-5 text-base text-center  lg:text-start lg:mb-0 lg:mx-0">
+          {info.description}
         </p>
-
       </AnimationContainer>
 
-      <AnimationContainer customClassName='w-[80px] sm:w-[176px] relative mb-6 lg:mb-0'>
+      <AnimationContainer customClassName="md:self-center relative mb-6 lg:mb-0">
         <Image
-          alt='Jean Rondón'
-          height={176}
-          width={176}
-          src='/jean-rondon.jpg'
-          sizes='30vw'
+          alt="Faysal Ahmed"
+          height={300}
+          width={300}
+          src="/5.png"
+          sizes="30vw"
           priority
-          className='rounded-3xl filter grayscale hover:grayscale-0 transition ease'
+          className="transition rounded-3xl "
         />
       </AnimationContainer>
-
     </div>
-  )
-}
+  );
+};
 
 export default Hero;

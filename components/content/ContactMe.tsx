@@ -1,42 +1,51 @@
 import AnimationContainer from '../utils/AnimationContainer';
 
 const ContactMe = () => {
+  const contact = {
+    email: 'faysal515.ae@gmail.com',
+    phone: '+971505352169'
+  };
   return (
-    <AnimationContainer customClassName='w-full'>
-
-      <h2 className='font-bold text-2xl md:text-2xl tracking-tight mb-8 text-white text-center lg:text-start' id='contact'>
+    <AnimationContainer customClassName="w-full">
+      <h2
+        className="font-bold text-2xl md:text-2xl tracking-tight mb-8 text-white text-center lg:text-start"
+        id="contact"
+      >
         Contact me
       </h2>
 
-      <div className='w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl'>
-
-        <div className='w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10'>
-
-          <a href='mailto:jeanrdev@gmail.com' target='_blank' rel='noreferrer' className='w-full'>
-            <div className='rounded border border-gray-800 hover:border-gray-900 bg-gray-900 p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease'>
-              <h6 className='font-bold text-1xl tracking-tight text-white text-start'>
+      <div className="w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl">
+        <div className="w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10">
+          <a
+            href="mailto:jeanrdev@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="w-full"
+          >
+            <div className="rounded border border-gray-800 hover:border-gray-900 bg-gray-900 p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease">
+              <h6 className="font-bold text-1xl tracking-tight text-white text-start">
                 Email
               </h6>
-              <p className='text-base mt-2 text-gray-400'>
-                jeanrdev@gmail.com
-              </p>
+              <p className="text-base mt-2 text-gray-400">{contact.email}</p>
             </div>
           </a>
 
-          <a href='https://walink.co/2369d5' target='_blank' rel='noreferrer' className='w-full'>
-            <div className='rounded border border-gray-800 hover:border-gray-900 bg-gray-900 p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease'>
-              <h6 className='font-bold text-1xl tracking-tight text-white text-start'>
+          <a
+            href="https://walink.co/2369d5"
+            target="_blank"
+            rel="noreferrer"
+            className="w-full"
+          >
+            <div className="rounded border border-gray-800 hover:border-gray-900 bg-gray-900 p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease">
+              <h6 className="font-bold text-1xl tracking-tight text-white text-start">
                 Phone
               </h6>
-              <p className='text-base mt-2 text-gray-400'>
-                +58 0416 943 86 66
-              </p>
+              <p className="text-base mt-2 text-gray-400">{contact.phone}</p>
             </div>
           </a>
-
         </div>
 
-        <div className='w-full flex justify-center items-center flex-col'>
+        {/* <div className='w-full flex justify-center items-center flex-col'>
           <form action='https://formspree.io/f/xdorkorr' method='POST' className='w-full space-y-4'>
             <div>
               <label className='sr-only' htmlFor='name'>Name</label>
@@ -110,12 +119,10 @@ const ContactMe = () => {
             </button>
 
           </form>
-        </div>
-
+        </div> */}
       </div>
-
-    </AnimationContainer >
-  )
-}
+    </AnimationContainer>
+  );
+};
 
 export default ContactMe;
