@@ -6,7 +6,7 @@ export const info = {
 
 export const links = {
   email: 'faysal515.ae@gmail.com',
-  whatsapp: '+971505352169',
+  whatsapp: 'https://wa.me/971505352169',
   stackoverlow: 'https://stackoverflow.com/users/1652667/faysal-ahmed',
   github: 'https://github.com/faysal515',
   linkedin: 'https://www.linkedin.com/in/faysal515/'

@@ -31,7 +31,7 @@ const ContactMe = () => {
           </a>
 
           <a
-            href="https://walink.co/2369d5"
+            href="https://wa.me/971505352169"
             target="_blank"
             rel="noreferrer"
             className="w-full"

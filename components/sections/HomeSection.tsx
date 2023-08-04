@@ -15,7 +15,7 @@ import { links } from '../data';
 const SocialLinks = ({ links }: any) => {
   return (
     <div className="flex flex-row w-full text-white space-x-4 sm:justify-start justify-center">
-      <a href={links.stackoverlow} target="_blank" rel="noreferrer">
+      <a href={links.whatsapp} target="_blank" rel="noreferrer">
         <FaWhatsapp size={32} title="whatsapp" />
       </a>
       <a href={links.stackoverlow} target="_blank" rel="noreferrer">
