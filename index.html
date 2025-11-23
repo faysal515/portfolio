@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Faysal Ahmed - AI Engineer & Technical Leader</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      /* Color Scheme Variables */
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --accent: #06b6d4;
+      --accent-warm: #f59e0b;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e5e7eb;
+
+      /* Spacing */
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      --spacing-2xl: 4rem;
+
+      /* Typography */
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: var(--spacing-sm) 0;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--spacing-md);
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    section {
+      padding: var(--spacing-xl) 0;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 3;
+      padding: var(--spacing-2xl);
+    }
+
+    .hero-image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 65% center;
+    }
+
+    .hero-image-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(30, 58, 138, 0.92) 0%, rgba(30, 58, 138, 0.85) 25%, rgba(30, 58, 138, 0.75) 40%, rgba(30, 58, 138, 0.4) 60%, rgba(30, 58, 138, 0.1) 75%, transparent 90%);
+      z-index: 2;
+    }
+
+    .hero-subtitle {
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-xs);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: var(--spacing-md);
+      line-height: 1.2;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4), 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: var(--spacing-lg);
+      font-weight: 500;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-location {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      margin-bottom: var(--spacing-lg);
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Impact Bar */
+    .impact-bar {
+      background: var(--bg-secondary);
+      padding: var(--spacing-lg) 0;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-lg);
+    }
+
+    .impact-item {
+      text-align: center;
+    }
+
+    .impact-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .impact-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--spacing-lg);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent);
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-md);
+      font-size: 0.95rem;
+    }
+
+    .project-impact {
+      font-weight: 600;
+      color: var(--accent-warm);
+      font-size: 0.9rem;
+    }
+
+    /* Tech Stack */
+    .tech-section {
+      background: var(--bg-secondary);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .tech-category {
+      background: var(--bg-card);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .tech-category h3 {
+      color: var(--primary);
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+      font-weight: 700;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+    }
+
+    .tech-tag {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Leadership */
+    .leadership-timeline {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: var(--spacing-lg);
+      padding-bottom: var(--spacing-xl);
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg-primary);
+    }
+
+    .timeline-company {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .timeline-role {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .timeline-description {
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .timeline-impact {
+      color: var(--accent-warm);
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    /* Credentials */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .credential-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: var(--spacing-md);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .credential-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .credential-icon {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .credential-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .credential-detail {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--primary);
+      color: white;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact-content {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-description {
+      font-size: 1.1rem;
+      margin-bottom: var(--spacing-lg);
+      opacity: 0.9;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .contact-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: var(--spacing-sm);
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .contact-link i {
+      font-size: 1.5rem;
+    }
+
+    .contact-link:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .contact-link:hover i {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      padding: var(--spacing-lg) 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: var(--spacing-lg);
+      }
+
+      .hero-image {
+        object-position: 75% center;
+      }
+
+      .hero-image-bg {
+        background: linear-gradient(to bottom, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.88) 45%, rgba(30, 58, 138, 0.6) 65%, rgba(30, 58, 138, 0.2) 80%, transparent 95%);
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .impact-number {
+        font-size: 1.5rem;
+      }
+
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <!-- Content will be rendered by JavaScript -->
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image-container">
+      <div class="hero-image-bg"></div>
+      <img src="" alt="" class="hero-image">
+    </div>
+    <div class="container">
+      <div class="hero-container">
+        <div class="hero-content">
+          <!-- Content will be rendered by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Bar -->
+  <section class="impact-bar">
+    <div class="container">
+      <div class="impact-grid">
+        <!-- Content will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section id="work">
+    <div class="container">
+      <h2 class="section-title">Featured Work</h2>
+      <div class="projects-grid">
+        <!-- Content will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Expertise -->
+  <section id="expertise" class="tech-section">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <div class="tech-grid">
+        <!-- Content will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Experience -->
+  <section id="leadership">
+    <div class="container">
+      <h2 class="section-title">Leadership & Impact</h2>
+      <div class="leadership-timeline">
+        <!-- Content will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-content">
+        <!-- Content will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <!-- Content will be rendered by JavaScript -->
+    </div>
+  </footer>
+
+  <script>
+    // Content Data Object
+    const currentYear = new Date().getFullYear();
+    const portfolioData = {
+      meta: {
+        title: "Faysal Ahmed - AI Engineer & Technical Leader"
+      },
+      nav: {
+        logo: "Faysal Ahmed",
+        links: [
+          { text: "Work", href: "#work" },
+          { text: "Expertise", href: "#expertise" },
+          { text: "Leadership", href: "#leadership" },
+          { text: "Contact", href: "#contact" }
+        ]
+      },
+      hero: {
+        image: "photo.JPG",
+        imageAlt: "Faysal Ahmed",
+        subtitle: "AI Engineer & Technical Leader",
+        title: "Developer with a Decade of Experience",
+        description: "I architect and deploy AI integrated solutions that deliver measurable business impact.",
+        location: "📍 Dubai, UAE",
+        ctaButtons: [
+          { text: "Available for Tech Lead Roles", href: "#contact", type: "primary" },
+          { text: "Consulting Inquiries", href: "#contact", type: "secondary" }
+        ]
+      },
+      impact: [
+        { number: "3", label: "Production AI Apps Deployed" },
+        { number: "10+", label: "Years of Experience" },
+        { number: "1500+", label: "Points on Stack Overflow" },
+        { number: "2024", label: "AI Hackathon Winner" }
+      ],
+      projects: [
+        {
+          tag: "Enterprise AI",
+          title: "Business AI Applications",
+          description: "Architected and deployed 3 production AI systems including knowledge chatbots and Microsoft Teams integration for IT support, amplifying customer agent performance at MENA's leading bank.",
+          impact: "⚡ RAG, Azure AI Search, OpenAI Integration"
+        },
+        {
+          tag: "Innovation",
+          title: "AskData - Hackathon Winner",
+          description: "Built an agentic AI platform for Abu Dhabi Open Data Portal that enables natural language queries over government datasets. Only solution integrated into the official platform.",
+          impact: "🏆 Abu Dhabi AI Hackathon 2024 Winner"
+        }
+      ],
+      techStack: [
+        {
+          category: "AI & Backend",
+          tags: ["LLM/RAG", "Agentic AI", "Node.js", "Python", "TypeScript", "MongoDB", "PostgreSQL"]
+        },
+        {
+          category: "Cloud & DevOps",
+          tags: ["Azure AI Services", "AWS", "Docker", "Microservices", "Cloudflare"]
+        },
+        {
+          category: "Frontend",
+          tags: ["React", "Next.js", "React Native", "Ant Design"]
+        },
+        {
+          category: "Leadership",
+          tags: ["Mentorship", "Team Building", "System Design", "Feedback Sessions"]
+        }
+      ],
+      leadership: [
+        {
+          company: "Emirates NBD",
+          role: "Senior Software Engineer · Aug 2023 - Present",
+          description: "Leading AI application development for MENA's top bank. Architected and deployed 3 production systems using RAG, Azure AI Search, and OpenAI. Applied advanced LLM techniques including few-shot prompting and in-context learning.",
+          impact: "🎯 Achieved Azure AI-102 & Oracle Gen AI Professional certifications"
+        },
+        {
+          company: "Momos",
+          role: "Senior/Lead Software Engineer · Aug 2021 - May 2023",
+          description: "Owned full-cycle development of real-time social media messaging and analytics system. Built classification-based chatbot that significantly reduced support tickets. Implemented platform-wide RBAC system.",
+          impact: "🎯 Reduced support tickets through intelligent chatbot automation"
+        },
+        {
+          company: "Now Delivery & Munchies",
+          role: "Technical Lead · Apr 2020 - Jul 2021",
+          description: "Assembled and led 6-person engineering team from ground up. Revamped parcel delivery flow with multi-warehouse dispatching. Automated merchant payment system integration.",
+          impact: "🎯 300% growth in daily orders through system optimization"
+        }
+      ],
+
+      contact: {
+        title: "Let's Work Together",
+        description: "I'm currently open to tech lead positions in startups and long-term consulting engagements. Let's discuss how I can help build your next AI-powered product.",
+        links: [
+          { text: "Email", href: "mailto:faysal515.ae@gmail.com", icon: "fas fa-envelope", iconType: "solid" },
+          { text: "LinkedIn", href: "https://www.linkedin.com/in/faysal515/", target: "_blank", icon: "fa-linkedin", iconType: "brand" },
+          { text: "WhatsApp", href: "https://wa.me/971505352169", target: "_blank", icon: "fa-whatsapp", iconType: "brand" },
+          { text: "GitHub", href: "https://github.com/faysal515", target: "_blank", icon: "fa-github", iconType: "brand" }
+        ],
+        cvDownload: {
+          text: "Download CV",
+          href: "Faysal Ahmed - AI Engineer.pdf"
+        }
+      },
+      footer: {
+        text: `© ${currentYear} Faysal Ahmed`
+      }
+    };
+
+    // Rendering Functions
+    function renderNavigation() {
+      const nav = document.querySelector('nav .nav-container');
+      nav.innerHTML = `
+                <div class="nav-logo">${portfolioData.nav.logo}</div>
+                <ul class="nav-links">
+                    ${portfolioData.nav.links.map(link =>
+        `<li><a href="${link.href}">${link.text}</a></li>`
+      ).join('')}
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            `;
+    }
+
+    function renderHero() {
+      const heroContent = document.querySelector('.hero-content');
+      heroContent.innerHTML = `
+                <div class="hero-subtitle">${portfolioData.hero.subtitle}</div>
+                <h1 class="hero-title">${portfolioData.hero.title}</h1>
+                <p class="hero-description">${portfolioData.hero.description}</p>
+                <p class="hero-location">${portfolioData.hero.location}</p>
+                <div class="cta-buttons">
+                    ${portfolioData.hero.ctaButtons.map(btn =>
+        `<a href="${btn.href}" class="btn btn-${btn.type}">${btn.text}</a>`
+      ).join('')}
+                </div>
+            `;
+
+      const heroImage = document.querySelector('.hero-image');
+      heroImage.src = portfolioData.hero.image;
+      heroImage.alt = portfolioData.hero.imageAlt;
+    }
+
+    function renderImpact() {
+      const impactGrid = document.querySelector('.impact-grid');
+      impactGrid.innerHTML = portfolioData.impact.map(item => `
+                <div class="impact-item">
+                    <div class="impact-number">${item.number}</div>
+                    <div class="impact-label">${item.label}</div>
+                </div>
+            `).join('');
+    }
+
+    function renderProjects() {
+      const projectsGrid = document.querySelector('.projects-grid');
+      projectsGrid.innerHTML = portfolioData.projects.map(project => `
+                <div class="project-card">
+                    <span class="project-tag">${project.tag}</span>
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <p class="project-impact">${project.impact}</p>
+                </div>
+            `).join('');
+    }
+
+    function renderTechStack() {
+      const techGrid = document.querySelector('.tech-grid');
+      techGrid.innerHTML = portfolioData.techStack.map(category => `
+                <div class="tech-category">
+                    <h3>${category.category}</h3>
+                    <div class="tech-tags">
+                        ${category.tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+    }
+
+    function renderLeadership() {
+      const timeline = document.querySelector('.leadership-timeline');
+      timeline.innerHTML = portfolioData.leadership.map(item => `
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="timeline-company">${item.company}</h3>
+                    <p class="timeline-role">${item.role}</p>
+                    <p class="timeline-description">${item.description}</p>
+                    <p class="timeline-impact">${item.impact}</p>
+                </div>
+            `).join('');
+    }
+
+
+
+    function renderContact() {
+      const contactContent = document.querySelector('.contact-content');
+      contactContent.innerHTML = `
+                <h2 class="section-title">${portfolioData.contact.title}</h2>
+                <p class="contact-description">${portfolioData.contact.description}</p>
+                <div class="contact-links">
+                    ${portfolioData.contact.links.map(link =>
+        `<a href="${link.href}" ${link.target ? `target="${link.target}"` : ''} class="contact-link" aria-label="${link.text}"><i class="${link.iconType === 'solid' ? 'fas' : 'fab'} ${link.icon}"></i></a>`
+      ).join('')}
+                </div>
+            `;
+    }
+
+    function renderFooter() {
+      const footer = document.querySelector('footer .container');
+      footer.innerHTML = `<p>${portfolioData.footer.text}</p>`;
+    }
+
+    // Initialize all content
+    function init() {
+      // Set page title
+      document.title = portfolioData.meta.title;
+
+      renderNavigation();
+      renderHero();
+      renderImpact();
+      renderProjects();
+      renderTechStack();
+      renderLeadership();
+      renderContact();
+      renderFooter();
+
+      // Initialize scroll animations after content is rendered
+      initScrollAnimations();
+      initSmoothScroll();
+    }
+
+    // Smooth scroll with offset for fixed nav
+    function initSmoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offset = 80;
+            const targetPosition = target.offsetTop - offset;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Add scroll animations
+    function initScrollAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.project-card, .timeline-item, .credential-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+
+</html>
